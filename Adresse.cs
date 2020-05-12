@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlytteFirmaBestillingsKlient
 {
-    class Adresse
+    public class Adresse
     {
         string _vejnavn;
         string _husnummer;

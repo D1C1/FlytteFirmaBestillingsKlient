@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace FlytteFirmaBestillingsKlient
 {
-    class Bruger
+    public class Bruger
     {
         private string _navn;
         private string _Email;
         private int _tlfNr;
+        private int _brugerId;
+
 
         public Bruger()
         {
@@ -32,5 +34,12 @@ namespace FlytteFirmaBestillingsKlient
             get { return _Email; }
             set { _Email = value; }
         }
+        
+        public int BrugerId
+        {
+            get { return _brugerId; }
+            set { _brugerId = value; }
+        }
+
     }
 }

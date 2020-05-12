@@ -22,8 +22,10 @@ namespace FlytteFirmaBestillingsKlient
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public BookingViewModel ViewModelBooking { get; set; }
         public MainPage()
         {
+            ViewModelBooking = new BookingViewModel();
             this.InitializeComponent();
         }
     }

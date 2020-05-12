@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace FlytteFirmaBestillingsKlient
 {
-    class Tilvalg
+    public class BookingViewModel
     {
+        public BookingViewModel()
+        {
+
+        }
+        public Booking CurrentBooking { get; set; }
     }
 }
