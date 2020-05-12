@@ -12,6 +12,6 @@ namespace FlytteFirmaBestillingsKlient
         {
 
         }
-        public Booking CurrentBooking { get; set; }
+        public Booking CurrentBooking { get; set; } = new Booking();
     }
 }
