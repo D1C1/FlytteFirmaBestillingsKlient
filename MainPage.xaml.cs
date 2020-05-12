@@ -24,7 +24,6 @@ namespace FlytteFirmaBestillingsKlient
     {
         public MainPage()
         {
-            Console.WriteLine("test");
             this.InitializeComponent();
         }
     }
