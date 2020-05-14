@@ -8,13 +8,12 @@ namespace FlytteFirmaBestillingsKlient
 {
     public class Adresse
     {
-        string _vejnavn;
-        string _husnummer;
-        string _etage;
+        string _adresselinje;
         int _postnummer;
         string _by;
         string _boligarealm2;
         int _antalVærelser;
         int _parkeringsAfstandmeter;
+        bool _isElevator;
     }
 }
