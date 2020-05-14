@@ -28,6 +28,10 @@ namespace FlytteFirmaBestillingsKlient
         }
 
         public DateTime FlytteDato { get => _flytteDato; set => _flytteDato = value; }
+        public Adresse AdresseFra { get => _adresseFra; set => _adresseFra = value; }
+        public Adresse AdresseTil { get => _adresseTil; set => _adresseTil = value; }
+        public Bruger BookingBruger { get => _bookingBruger; set => _bookingBruger = value; }
+        public int BookingId1 { get => _bookingId; set => _bookingId = value; }
 
         // indsæt tilvalg og materialer
     }
