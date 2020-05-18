@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button Command="{x:Bind ViewModelBooking.GemDataButton, Mode=OneWay}" Content="Gem Booking" Height="50" Width="105" HorizontalAlignment="Center"/>
 
     </Grid>
 </Page>

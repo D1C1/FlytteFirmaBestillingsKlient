@@ -11,7 +11,7 @@ namespace FlytteFirmaBestillingsKlient
         Adresse _adresseFra;
         Adresse _adresseTil;
         DateTime _flytteDato;
-        Bruger _bookingBruger;
+        Bruger _bookingBruger = new Bruger();
         private int _bookingId;
 
 
