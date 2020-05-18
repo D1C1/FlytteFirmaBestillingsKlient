@@ -13,6 +13,7 @@ namespace FlytteFirmaBestillingsKlient
             //testdata
             CurrentBooking.BookingId = 1;
             CurrentBooking.BookingBruger.Navn="morten";
+            //testdata
 
             GemDataButton = new RelayCommand(GemDataTilDiskAsync);
         }
