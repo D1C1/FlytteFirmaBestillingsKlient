@@ -22,7 +22,16 @@ namespace FlytteFirmaBestillingsKlient
 
         private async void GemDataTilDiskAsync()
         {
-            await PersistencyService.GemDataTilDiskAsyncPS(CurrentBooking);
+            try
+            {
+                await PersistencyService.GemDataTilDiskAsyncPS(CurrentBooking);
+            }
+            catch (Exception)
+            {
+                PersistencyService.Makefile();
+                await PersistencyService.GemDataTilDiskAsyncPS(CurrentBooking);
+            }
+            
         }
     }
 }
