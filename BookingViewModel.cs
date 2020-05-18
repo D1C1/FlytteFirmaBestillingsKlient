@@ -10,7 +10,9 @@ namespace FlytteFirmaBestillingsKlient
     {
         public BookingViewModel()
         {
-
+            //testdata
+            CurrentBooking.BookingId = 1;
+            CurrentBooking.BookingBruger.Navn="morten";
         }
         public Booking CurrentBooking { get; set; } = new Booking();
     }
