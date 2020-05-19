@@ -10,12 +10,12 @@
 
     <Grid>
         <Button Command="{x:Bind ViewModelBooking.GemDataButton, Mode=OneWay}" Content="Gem Booking" Height="50" Width="105" HorizontalAlignment="Center" Margin="0,860,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="77,245,0,0" Text="Fornavn" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
+        <TextBox HorizontalAlignment="Left" Margin="77,245,0,0" Text="{x:Bind ViewModelBooking.NavnView, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
         <TextBox HorizontalAlignment="Left" Margin="77,323,0,0" Text="Efternavn" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
-        <TextBox HorizontalAlignment="Left" Margin="77,400,0,0" Text="E-mail" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
-        <TextBox HorizontalAlignment="Left" Margin="77,0,0,0" Text="Telefon Nr." TextWrapping="Wrap" VerticalAlignment="Center" Height="32" Width="123"/>
+        <TextBox HorizontalAlignment="Left" Margin="77,400,0,0" Text="{x:Bind ViewModelBooking.EmailView, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
+        <TextBox HorizontalAlignment="Left" Margin="77,0,0,0" Text="{x:Bind ViewModelBooking.TlfnrView, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Center" Height="32" Width="123"/>
         <TextBlock HorizontalAlignment="Left" Margin="77,221,0,0" Text="Fornavn" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="77,299,0,0" Text="Efternavn" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="77,299,0,0" Text="Efternavn(ikke brugt endnu)" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="77,376,0,0" Text="E-mail" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="77,469,0,0" Text="Telefon Nr." TextWrapping="Wrap" VerticalAlignment="Top"/>
         <HyperlinkButton Content="Click to go to Adminpage"

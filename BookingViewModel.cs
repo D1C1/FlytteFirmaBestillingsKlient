@@ -33,6 +33,7 @@ namespace FlytteFirmaBestillingsKlient
         }
         private async void GemDataTilDiskAsync()
         {
+            SetInformation();
             try
             {
                 await PersistencyService.GemDataTilDiskAsyncPS(CurrentBooking);
