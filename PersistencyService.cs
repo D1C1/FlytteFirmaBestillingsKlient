@@ -18,6 +18,7 @@ namespace FlytteFirmaBestillingsKlient
             ObservableCollection<Booking> bookings = await HentDataFraDiskAsyncPS(); // henter den nuværende liste fra disken
             try
             {
+                booking.BookingId = bookings.Count + 1;
                 bookings.Add(booking);// indsætter den nye booking i listen
             }
             catch (Exception)
