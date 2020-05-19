@@ -13,24 +13,24 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace FlytteFirmaBestillingsKlient
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class AdminPage : Page
     {
-        public BookingViewModel ViewModelBooking { get; set; }
-        public MainPage()
+        public AdminViewModel ViewModelAdmin { get; set; }
+        public AdminPage()
         {
-            ViewModelBooking = new BookingViewModel();
+            ViewModelAdmin = new AdminViewModel();
             this.InitializeComponent();
         }
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AdminPage));
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
