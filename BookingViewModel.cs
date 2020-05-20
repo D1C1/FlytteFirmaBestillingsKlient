@@ -24,12 +24,14 @@ namespace FlytteFirmaBestillingsKlient
         public string EmailView { get; set; }
         public int TlfnrView { get; set; }
         //brugerdetaljer slut
+        public DateTimeOffset MovingDateView { get; set; }
 
         private void SetInformation()
         {
             CurrentBooking.BookingBruger.Navn = NavnView;
             CurrentBooking.BookingBruger.Email = EmailView;
             CurrentBooking.BookingBruger.TlfNr = TlfnrView;
+            CurrentBooking.FlytteDato = MovingDateView.Date;
         }
         private async void GemDataTilDiskAsync()
         {
