@@ -16,6 +16,7 @@
                         <TextBox Text="{x:Bind BookingId, Mode=TwoWay}"/>
                         <TextBox Text="{x:Bind BookingBruger.Navn, Mode=TwoWay}"/>
                         <TextBox Text="{x:Bind FlytteDato, Mode=TwoWay}"/>
+                        <TextBox Text="{x:Bind Detaljer, Mode=OneWay}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

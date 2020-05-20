@@ -18,7 +18,7 @@ namespace FlytteFirmaBestillingsKlient
 
         public Adresse()
         {
-
+            Adresselinje = "tewst";
         }
 
         public string Adresselinje { get => _adresselinje; set => _adresselinje = value; }
@@ -27,6 +27,7 @@ namespace FlytteFirmaBestillingsKlient
         public int AntalVærelser { get => _antalVærelser; set => _antalVærelser = value; }
         public int ParkeringsAfstandmeter { get => _parkeringsAfstandmeter; set => _parkeringsAfstandmeter = value; }
         public bool IsElevator { get => _isElevator; set => _isElevator = value; }
+        public string Boligarealm2 { get => _boligarealm2; set => _boligarealm2 = value; }
 
         public override string ToString()
         {

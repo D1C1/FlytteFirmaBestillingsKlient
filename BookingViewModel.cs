@@ -38,7 +38,6 @@ namespace FlytteFirmaBestillingsKlient
         }
         private async void GemDataTilDiskAsync()
         {
-            Console.WriteLine($"{CurrentBooking.ToString()}");
             SetInformation();
             try
             {

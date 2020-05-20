@@ -32,15 +32,21 @@ namespace FlytteFirmaBestillingsKlient
         public Adresse AdresseFra { get => _adresseFra; set => _adresseFra = value; }
         public Adresse AdresseTil { get => _adresseTil; set => _adresseTil = value; }
         public Bruger BookingBruger { get => _bookingBruger; set => _bookingBruger = value; }
+        public string Detaljer
+        {
+            get { return ToString(); }
+            //set { _detaljer = value; }
+        }
+
 
 
         // indsæt tilvalg og materialer
 
         public override string ToString()
         {
-            return $"Booking nr {BookingId} Bruger detaljer: {BookingBruger.ToString()}" +
-                $" Skal flytte fra adressen: {AdresseFra.ToString()} til adressen : {AdresseTil.ToString()} " +
-                $"på datoen: {FlytteDato.ToString()}";
+            return $"Booking nr {BookingId} Bruger detaljer: {BookingBruger}" +
+                $" Skal flytte fra adressen:  til adressen :  " +
+                $"på datoen: {FlytteDato}";
         }
     }
 }
