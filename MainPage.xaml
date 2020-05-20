@@ -19,6 +19,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="77,376,0,0" Text="E-mail" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="77,469,0,0" Text="Telefon Nr." TextWrapping="Wrap" VerticalAlignment="Top"/>
         <HyperlinkButton Content="Click to go to Adminpage"
-                 Click="HyperlinkButton_Click" Margin="1155,30,0,0" VerticalAlignment="Top"/>
+                 Click="HyperlinkButton_Click" Margin="1306,28,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
