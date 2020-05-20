@@ -18,7 +18,9 @@ namespace FlytteFirmaBestillingsKlient
 
         public Booking()
         {
-
+            AdresseFra = new Adresse();
+            AdresseTil = new Adresse();
+            BookingBruger = new Bruger();
         }
 
         public int BookingId
@@ -33,5 +35,12 @@ namespace FlytteFirmaBestillingsKlient
 
 
         // indsæt tilvalg og materialer
+
+        public override string ToString()
+        {
+            return $"Booking nr {BookingId} Bruger detaljer: {BookingBruger.ToString()}" +
+                $" Skal flytte fra adressen: {AdresseFra.ToString()} til adressen : {AdresseTil.ToString()} " +
+                $"på datoen: {FlytteDato.ToString()}";
+        }
     }
 }

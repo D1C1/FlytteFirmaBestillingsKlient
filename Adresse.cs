@@ -27,5 +27,10 @@ namespace FlytteFirmaBestillingsKlient
         public int AntalVærelser { get => _antalVærelser; set => _antalVærelser = value; }
         public int ParkeringsAfstandmeter { get => _parkeringsAfstandmeter; set => _parkeringsAfstandmeter = value; }
         public bool IsElevator { get => _isElevator; set => _isElevator = value; }
+
+        public override string ToString()
+        {
+            return $"{Adresselinje}";
+        }
     }
 }

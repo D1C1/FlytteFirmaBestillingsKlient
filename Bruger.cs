@@ -41,5 +41,9 @@ namespace FlytteFirmaBestillingsKlient
             set { _brugerId = value; }
         }
 
+        public override string ToString()
+        {
+            return $"Navn {Navn}";
+        }
     }
 }

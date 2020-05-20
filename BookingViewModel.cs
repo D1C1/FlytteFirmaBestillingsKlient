@@ -24,6 +24,9 @@ namespace FlytteFirmaBestillingsKlient
         public string EmailView { get; set; }
         public int TlfnrView { get; set; }
         //brugerdetaljer slut
+        //adressedetaljer
+
+        //adressedetaljer slut
         public DateTimeOffset MovingDateView { get; set; }
 
         private void SetInformation()
@@ -35,6 +38,7 @@ namespace FlytteFirmaBestillingsKlient
         }
         private async void GemDataTilDiskAsync()
         {
+            Console.WriteLine($"{CurrentBooking.ToString()}");
             SetInformation();
             try
             {
