@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="light">
 
     <Grid>
         <Button Command="{x:Bind ViewModelBooking.GemDataButton, Mode=OneWay}" Content="Gem Booking" Height="50" Width="105" HorizontalAlignment="Center" Margin="0,860,0,0" VerticalAlignment="Top"/>
