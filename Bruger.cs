@@ -41,6 +41,10 @@ namespace FlytteFirmaBestillingsKlient
             set { _brugerId = value; }
         }
 
+        /// <summary>
+        /// beskrivelse af brugerdetaljer
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Navn {Navn}";

@@ -22,12 +22,17 @@ namespace FlytteFirmaBestillingsKlient
     /// </summary>
     public sealed partial class AdminPage : Page
     {
-        public AdminViewModel ViewModelAdmin { get; set; }
+        public AdminViewModel ViewModelAdmin { get; set; }// opretter viewmodel
         public AdminPage()
         {
-            ViewModelAdmin = new AdminViewModel();
+            ViewModelAdmin = new AdminViewModel();// instantiere viewmodel
             this.InitializeComponent();
         }
+        /// <summary>
+        /// Hyperlink til at gå tilbage til bestillings side fra admin side
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));

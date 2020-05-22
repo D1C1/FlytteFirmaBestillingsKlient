@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FlytteFirmaBestillingsKlient
 {
+    /// <summary>
+    /// Denne klasse er beskrivelsen af en booking
+    /// </summary>
     public class Booking
     {
         Adresse _adresseFra;
@@ -15,7 +18,9 @@ namespace FlytteFirmaBestillingsKlient
         private int _bookingId;
 
 
-
+        /// <summary>
+        /// Denne constuctor instantiere to adresser en fra og en til samt en bruger
+        /// </summary>
         public Booking()
         {
             AdresseFra = new Adresse();
@@ -42,6 +47,10 @@ namespace FlytteFirmaBestillingsKlient
 
         // indsæt tilvalg og materialer
 
+        /// <summary>
+        /// Giver en beskrivelse af denne booking, hvilket tager brug af ToString på andre objekter
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Booking nr {BookingId} Bruger detaljer: {BookingBruger}" +

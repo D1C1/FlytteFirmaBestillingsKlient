@@ -29,6 +29,10 @@ namespace FlytteFirmaBestillingsKlient
         public bool IsElevator { get => _isElevator; set => _isElevator = value; }
         public string Boligarealm2 { get => _boligarealm2; set => _boligarealm2 = value; }
 
+        /// <summary>
+        /// Detaljer for adresse
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"{Adresselinje}";

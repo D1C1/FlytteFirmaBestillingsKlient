@@ -9,10 +9,17 @@ using Windows.Storage;
 
 namespace FlytteFirmaBestillingsKlient
 {
+    /// <summary>
+    /// I denne klasse beskrives vores persistency services hvilke er vores asynkrone metoder
+    /// </summary>
     class PersistencyService
     {
         private static string filNavn = "Booking1.json";
-
+        /// <summary>
+        /// Denne metode gemmer en booking til listen som ligger på disken, hvis listen er tom får den en exception og opretter en ny liste 
+        /// </summary>
+        /// <param name="booking"></param>
+        /// <returns></returns>
         public static async Task GemDataTilDiskAsyncPS(Booking booking)
         {
             ObservableCollection<Booking> bookings = await HentDataFraDiskAsyncPS(); // henter den nuværende liste fra disken
@@ -36,18 +43,32 @@ namespace FlytteFirmaBestillingsKlient
             await FileIO.WriteTextAsync(file, jsonText);
         }
 
+        /// <summary>
+        /// Denne moetode serialisere en liste med booking objekter til et Json objekt
+        /// </summary>
+        /// <param name="booking"></param>
+        /// <returns></returns>
         public static string GetJsonPS(ObservableCollection<Booking> booking)
         {
             string json = JsonConvert.SerializeObject(booking);
             return json;
         }
 
+        /// <summary>
+        /// Denne metode er lavet til at deserialisere et Json objekt
+        /// </summary>
+        /// <param name="jsonText"></param>
+        /// <returns></returns>
         private static ObservableCollection<Booking> DeserialiserJson(string jsonText)
         {
             ObservableCollection<Booking> nyBooking = JsonConvert.DeserializeObject<ObservableCollection<Booking>>(jsonText);
             return nyBooking;
         }
 
+        /// <summary>
+        /// Denne metode henter vores Json objekt fra disken og deserialisere den til en liste af booking objekter
+        /// </summary>
+        /// <returns></returns>
         public static async Task<ObservableCollection<Booking>> HentDataFraDiskAsyncPS()
         {
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
@@ -58,6 +79,9 @@ namespace FlytteFirmaBestillingsKlient
 
             return tempBookings;
         }
+        /// <summary>
+        /// Denne metode er her for at oprette en fil i tilfældet af at den ikke eksistere endnu
+        /// </summary>
         public static async void Makefile()
         {
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
