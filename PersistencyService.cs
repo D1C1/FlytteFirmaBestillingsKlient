@@ -35,7 +35,16 @@ namespace FlytteFirmaBestillingsKlient
                 bookings.Add(booking);// indsætter den nye booking i listen
             }
 
-            // laver en ny booking liste med den indsatte nye booking
+            await GemListe(bookings);
+        }
+
+        /// <summary>
+        /// laver en ny booking liste med den indsatte nye booking
+        /// </summary>
+        /// <param name="bookings"></param>
+        /// <returns></returns>
+        public static async Task GemListe(ObservableCollection<Booking> bookings)
+        {
             string jsonText = GetJsonPS(bookings);
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localfolder.CreateFileAsync(filNavn, CreationCollisionOption.ReplaceExisting);

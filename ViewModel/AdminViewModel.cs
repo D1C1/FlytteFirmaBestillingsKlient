@@ -35,5 +35,10 @@ namespace FlytteFirmaBestillingsKlient
                 OC_Bookings.Add(booking);
             }
         }
+
+        private async void GemListeTilDiskAsync()
+        {
+            await PersistencyService.GemListe(OC_Bookings);
+        }
     }
 }
