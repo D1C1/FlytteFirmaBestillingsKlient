@@ -26,6 +26,8 @@ namespace FlytteFirmaBestillingsKlient
             AdresseFra = new Adresse();
             AdresseTil = new Adresse();
             BookingBruger = new Bruger();
+            Nedpakning = false;
+            Udpakning = false;
         }
 
         public int BookingId
@@ -43,9 +45,9 @@ namespace FlytteFirmaBestillingsKlient
             //set { _detaljer = value; }
         }
 
-
-
         // indsæt tilvalg og materialer
+        public bool Nedpakning { get; set; }
+        public bool Udpakning { get; set; }
 
         /// <summary>
         /// Giver en beskrivelse af denne booking, hvilket tager brug af ToString på andre objekter
@@ -53,9 +55,26 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Booking nr {BookingId} Bruger detaljer: {BookingBruger}" +
+            string returnString = $"Booking nr {BookingId} Bruger detaljer: {BookingBruger}" +
                 $" Skal flytte fra adressen:  til adressen :  " +
-                $"på datoen: {FlytteDato}";
+                $"på datoen: {FlytteDato} ";
+            if (Nedpakning && Udpakning)
+            {
+                returnString = returnString + " Kunde vil gerne have både nedpakning og udpakning ";
+            }
+            else if (Nedpakning)
+            {
+                returnString = returnString + "Kunde ønsker kun nedpakning ";
+            }
+            else if (Udpakning)
+            {
+                returnString = returnString + "Kunde ønsker kun udpakning ";
+            }
+            else
+            {
+                returnString = returnString + "Kunde har ikke specificeret pakning ";
+            }
+            return returnString;
         }
     }
 }

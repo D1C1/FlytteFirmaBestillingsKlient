@@ -23,5 +23,7 @@
                  Click="HyperlinkButton_Click" Margin="1306,28,0,0" VerticalAlignment="Top"/>
         <CalendarDatePicker Date="{x:Bind ViewModelBooking.MovingDateView, Mode=TwoWay}" x:Name="MovingDatePicker" Margin="640,276,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="640,252,0,0" Text="Vælg dato" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{x:Bind ViewModelBooking.CurrentBooking.Nedpakning, Mode=TwoWay}" Content="Nedpakning" Margin="642,354,0,0" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.Udpakning}" Content="Udpakning" Margin="640,431,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
