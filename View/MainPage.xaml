@@ -21,6 +21,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="328,500,0,0" Text="Telefon Nr." TextWrapping="Wrap" VerticalAlignment="Top"/>
         <HyperlinkButton Content="Click to go to Adminpage"
                  Click="HyperlinkButton_Click" Margin="1306,28,0,0" VerticalAlignment="Top"/>
-        <CalendarDatePicker Date="{x:Bind ViewModelBooking.MovingDateView, Mode=TwoWay}" x:Name="MovingDatePicker" Margin="0,276,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <CalendarDatePicker Date="{x:Bind ViewModelBooking.MovingDateView, Mode=TwoWay}" x:Name="MovingDatePicker" Margin="640,276,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="640,252,0,0" Text="Kalender" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>
