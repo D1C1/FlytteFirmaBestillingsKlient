@@ -20,12 +20,14 @@ namespace FlytteFirmaBestillingsKlient
 
             HentDataButton = new RelayCommand(HentDataFraDiskAsync);
             SletData = new RelayCommand(RemoveBooking);
+            GemData = new RelayCommand(GemListeTilDiskAsync);
         }
 
         public ObservableCollection<Booking> OC_Bookings { get; set; } = new ObservableCollection<Booking>();
         public Booking SelectedBooking { get; set; }
         public RelayCommand HentDataButton { get; set; }
         public RelayCommand SletData { get; set; }
+        public RelayCommand GemData { get; set; }
 
         /// <summary>
         /// Henter en liste fra disken

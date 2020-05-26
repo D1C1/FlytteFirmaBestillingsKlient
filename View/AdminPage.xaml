@@ -31,5 +31,6 @@
         <HyperlinkButton Content="Click to go to MainPage"
                  Click="HyperlinkButton_Click" Margin="1342,10,0,0" VerticalAlignment="Top"/>
         <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.SletData}" Content="Slet Booking" Margin="0,628,0,0" VerticalAlignment="Top" Height="92" Width="237" HorizontalAlignment="Center"/>
+        <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.GemData}" Content="Gem Liste" Margin="1230,628,0,0" VerticalAlignment="Top" Height="92" Width="237"/>
     </Grid>
 </Page>
