@@ -19,10 +19,13 @@ namespace FlytteFirmaBestillingsKlient
         {
 
             HentDataButton = new RelayCommand(HentDataFraDiskAsync);
+            SletData = new RelayCommand(RemoveBooking);
         }
 
         public ObservableCollection<Booking> OC_Bookings { get; set; } = new ObservableCollection<Booking>();
+        public Booking SelectedBooking { get; set; }
         public RelayCommand HentDataButton { get; set; }
+        public RelayCommand SletData { get; set; }
 
         /// <summary>
         /// Henter en liste fra disken
@@ -35,7 +38,10 @@ namespace FlytteFirmaBestillingsKlient
                 OC_Bookings.Add(booking);
             }
         }
-
+        private void RemoveBooking()
+        {
+            OC_Bookings.Remove(SelectedBooking);
+        }
         private async void GemListeTilDiskAsync()
         {
             await PersistencyService.GemListe(OC_Bookings);
