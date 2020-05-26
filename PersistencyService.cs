@@ -45,6 +45,10 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public static async Task GemListe(ObservableCollection<Booking> bookings)
         {
+            for (int i = 0; i < bookings.Count; i++)
+            {
+                bookings[i].BookingId = i + 1;
+            }
             string jsonText = GetJsonPS(bookings);
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localfolder.CreateFileAsync(filNavn, CreationCollisionOption.ReplaceExisting);
