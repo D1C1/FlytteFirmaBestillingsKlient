@@ -15,16 +15,16 @@
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="local:Booking">
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{x:Bind BookingId, Mode=TwoWay}"/>
-                            <TextBox Text="{x:Bind BookingBruger.ForNavn, Mode=TwoWay}"/>
+                            <TextBox Text="{x:Bind BookingId, Mode=OneTime}"/>
+                            <TextBox Text="{x:Bind BookingBruger.ForNavn, Mode=OneTime}"/>
                             <TextBlock Text="{x:Bind FlytteDato, Mode=OneTime}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
             <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}"
-            Margin="0,24,0,0">
-                <TextBlock Text="{Binding Detaljer}"/>
+            Margin="0,24,0,0" Height="106" Width="705">
+                <TextBlock Text="{Binding Detaljer}" TextWrapping="Wrap" Height="81"/>
             </StackPanel>
         </StackPanel>
         <Button Command="{x:Bind ViewModelAdmin.HentDataButton, Mode=OneWay}" Content="Hent Data" Margin="1263,330,0,0" Height="92" Width="237" VerticalAlignment="Top"/>
