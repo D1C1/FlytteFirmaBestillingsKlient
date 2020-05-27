@@ -22,15 +22,14 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}"
-            Margin="0,24,0,0" Height="106" Width="705">
-                <TextBlock Text="{Binding Detaljer}" TextWrapping="Wrap" Height="81"/>
-            </StackPanel>
         </StackPanel>
         <Button Command="{x:Bind ViewModelAdmin.HentDataButton, Mode=OneWay}" Content="Hent Data" Margin="1263,330,0,0" Height="92" Width="237" VerticalAlignment="Top"/>
         <HyperlinkButton Content="Click to go to MainPage"
                  Click="HyperlinkButton_Click" Margin="1342,10,0,0" VerticalAlignment="Top"/>
         <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.SletData}" Content="Slet Booking" Margin="1263,0,0,0" Height="92" Width="237"/>
         <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.GemData}" Content="Gem Liste" Margin="1263,593,0,0" VerticalAlignment="Top" Height="92" Width="237"/>
+        <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="420" Margin="1070,165,0,0" Height="145">
+            <TextBlock Text="{Binding Detaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
+        </StackPanel>
     </Grid>
 </Page>
