@@ -16,7 +16,7 @@ namespace FlytteFirmaBestillingsKlient
         /// </summary>
         public BookingViewModel()
         {
-
+            MovingDateView = DateTimeOffset.Now;
             GemDataButton = new RelayCommand(GemDataTilDiskAsync);
         }
 

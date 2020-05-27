@@ -17,7 +17,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBox Text="{x:Bind BookingId, Mode=TwoWay}"/>
                             <TextBox Text="{x:Bind BookingBruger.ForNavn, Mode=TwoWay}"/>
-                            <TextBox Text="{x:Bind FlytteDato, Mode=TwoWay}"/>
+                            <TextBlock Text="{x:Bind FlytteDato, Mode=TwoWay}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
