@@ -39,7 +39,7 @@ namespace FlytteFirmaBestillingsKlient
         /// </summary>
         private void SetInformation()
         {
-            CurrentBooking.BookingBruger.Navn = NavnView;
+            CurrentBooking.BookingBruger.ForNavn = NavnView;
             CurrentBooking.BookingBruger.Email = EmailView;
             CurrentBooking.BookingBruger.TlfNr = TlfnrView;
             CurrentBooking.FlytteDato = MovingDateView.Date;
