@@ -25,5 +25,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="640,252,0,0" Text="Vælg dato" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <CheckBox IsChecked="{x:Bind ViewModelBooking.CurrentBooking.Nedpakning, Mode=TwoWay}" Content="Nedpakning" Margin="642,354,0,0" VerticalAlignment="Top"/>
         <CheckBox IsChecked="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.Udpakning}" Content="Udpakning" Margin="640,431,0,0" VerticalAlignment="Top"/>
+        <ToggleSwitch OffContent="Privatflytning" OnContent="Erhvervsflytning" Header="Type af flytning" Margin="891,265,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

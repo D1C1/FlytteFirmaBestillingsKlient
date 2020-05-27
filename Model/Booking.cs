@@ -15,6 +15,7 @@ namespace FlytteFirmaBestillingsKlient
         Adresse _adresseTil;
         DateTime _flytteDato;
         Bruger _bookingBruger = new Bruger();
+        bool _privatflytning = false;
         private int _bookingId;
 
 
@@ -48,6 +49,7 @@ namespace FlytteFirmaBestillingsKlient
         // indsæt tilvalg og materialer
         public bool Nedpakning { get; set; }
         public bool Udpakning { get; set; }
+        public bool Privatflytning { get => _privatflytning; set => _privatflytning = value; }
 
         /// <summary>
         /// Giver en beskrivelse af denne booking, hvilket tager brug af ToString på andre objekter
@@ -73,6 +75,15 @@ namespace FlytteFirmaBestillingsKlient
             else
             {
                 returnString = returnString + "Kunde har ikke specificeret pakning ";
+            }
+
+            if (Privatflytning)
+            {
+                returnString = returnString + " Kunde har specificeret dette er en privatflytning ";
+            }
+            else
+            {
+                returnString = returnString + " Kunde har specificeret dette er en erhvervsflytning ";
             }
             return returnString;
         }
