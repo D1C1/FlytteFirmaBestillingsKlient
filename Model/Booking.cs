@@ -58,7 +58,7 @@ namespace FlytteFirmaBestillingsKlient
         public override string ToString()
         {
             string returnString = $"Booking nr {BookingId}. Bruger detaljer: {BookingBruger}" +
-                $" Skal flytte fra adressen:{AdresseFra.Adresselinje} til adressen: {AdresseTil.Adresselinje}. " +
+                $" Skal flytte fra adressen:{AdresseFra} til adressen: {AdresseTil}. " +
                 $"på datoen: {FlytteDato} ";
             if (Nedpakning && Udpakning)
             {
