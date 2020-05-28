@@ -34,7 +34,7 @@ namespace FlytteFirmaBestillingsKlient
         /// </summary>
         private async void HentDataFraDiskAsync()
         {
-            ObservableCollection<Booking> templist = await PersistencyService.HentDataFraDiskAsyncPS();
+            ObservableCollection<Booking> templist = await PersistencyService.HentDataFraDiskAsyncPS("Booking1.json");
             foreach (var booking in templist)
             {
                 OC_Bookings.Add(booking);
@@ -46,7 +46,7 @@ namespace FlytteFirmaBestillingsKlient
         }
         private async void GemListeTilDiskAsync()
         {
-            await PersistencyService.GemListe(OC_Bookings);
+            await PersistencyService.GemListe("Booking1.json",OC_Bookings);
         }
     }
 }

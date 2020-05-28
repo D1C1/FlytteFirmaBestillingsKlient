@@ -14,7 +14,6 @@ namespace FlytteFirmaBestillingsKlient
     /// </summary>
     class PersistencyService
     {
-        private static string filNavn = "Booking1.json";
         /// <summary>
         /// Denne metode gemmer en booking til listen som ligger på disken, hvis listen er tom får den en exception og opretter en ny liste 
         /// </summary>
@@ -22,7 +21,7 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public static async Task GemDataTilDiskAsyncPS(Booking booking)
         {
-            ObservableCollection<Booking> bookings = await HentDataFraDiskAsyncPS(); // henter den nuværende liste fra disken
+            ObservableCollection<Booking> bookings = await HentDataFraDiskAsyncPS("Booking1.json"); // henter den nuværende liste fra disken
             try
             {
                 booking.BookingId = bookings.Count + 1;
@@ -35,7 +34,7 @@ namespace FlytteFirmaBestillingsKlient
                 bookings.Add(booking);// indsætter den nye booking i listen
             }
 
-            await GemListe(bookings);
+            await GemListe("Booking1.json",bookings);
         }
 
         /// <summary>
@@ -43,7 +42,7 @@ namespace FlytteFirmaBestillingsKlient
         /// </summary>
         /// <param name="bookings"></param>
         /// <returns></returns>
-        public static async Task GemListe(ObservableCollection<Booking> bookings)
+        public static async Task GemListe(string filNavn, ObservableCollection<Booking> bookings)
         {
             for (int i = 0; i < bookings.Count; i++)
             {
@@ -82,7 +81,7 @@ namespace FlytteFirmaBestillingsKlient
         /// Denne metode henter vores Json objekt fra disken og deserialisere den til en liste af booking objekter
         /// </summary>
         /// <returns></returns>
-        public static async Task<ObservableCollection<Booking>> HentDataFraDiskAsyncPS()
+        public static async Task<ObservableCollection<Booking>> HentDataFraDiskAsyncPS(string filNavn)
         {
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localfolder.GetFileAsync(filNavn);
@@ -95,10 +94,27 @@ namespace FlytteFirmaBestillingsKlient
         /// <summary>
         /// Denne metode er her for at oprette en fil i tilfældet af at den ikke eksistere endnu
         /// </summary>
-        public static async void Makefile()
+        public static async void Makefile(string filNavn)
         {
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localfolder.CreateFileAsync(filNavn, CreationCollisionOption.ReplaceExisting);
+        }
+        public static async void Gembooking(string filNavn, Booking booking)
+        {
+            string jsonText = JsonConvert.SerializeObject(booking);
+            StorageFolder localfolder = ApplicationData.Current.LocalFolder;
+            StorageFile file = await localfolder.CreateFileAsync(filNavn, CreationCollisionOption.ReplaceExisting);
+
+            await FileIO.WriteTextAsync(file, jsonText);
+        }
+        public static async Task<Booking> HentBooking(string filNavn, Booking booking)
+        {
+            StorageFolder localfolder = ApplicationData.Current.LocalFolder;
+            StorageFile file = await localfolder.GetFileAsync(filNavn);
+            string jsonText = await FileIO.ReadTextAsync(file);
+            Booking tempBooking = new Booking();
+            Booking nyBooking = JsonConvert.DeserializeObject<Booking>(jsonText);
+            return nyBooking;
         }
     }
 }

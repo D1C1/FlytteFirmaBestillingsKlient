@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button Content="Gem Adresser" Height="65" Width="135" HorizontalAlignment="Center"/>
 
     </Grid>
 </Page>

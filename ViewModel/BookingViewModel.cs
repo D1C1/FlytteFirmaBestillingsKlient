@@ -56,7 +56,7 @@ namespace FlytteFirmaBestillingsKlient
             }
             catch (Exception)
             {
-                PersistencyService.Makefile();
+                PersistencyService.Makefile("Booking1.json");
                 await PersistencyService.GemDataTilDiskAsyncPS(CurrentBooking);
             }
             
