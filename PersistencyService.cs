@@ -99,7 +99,7 @@ namespace FlytteFirmaBestillingsKlient
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localfolder.CreateFileAsync(filNavn, CreationCollisionOption.ReplaceExisting);
         }
-        public static async void Gembooking(string filNavn, Booking booking)
+        public static async Task Gembooking(string filNavn, Booking booking)
         {
             string jsonText = JsonConvert.SerializeObject(booking);
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
@@ -107,7 +107,7 @@ namespace FlytteFirmaBestillingsKlient
 
             await FileIO.WriteTextAsync(file, jsonText);
         }
-        public static async Task<Booking> HentBooking(string filNavn, Booking booking)
+        public static async Task<Booking> HentBooking(string filNavn)
         {
             StorageFolder localfolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localfolder.GetFileAsync(filNavn);

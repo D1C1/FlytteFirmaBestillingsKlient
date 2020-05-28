@@ -10,16 +10,30 @@ namespace FlytteFirmaBestillingsKlient
     {
         public AdresseViewModel()
         {
-            AdresseFra = new Adresse();
-            AdresseTil = new Adresse();
+            CurrentBooking = new Booking();
             //testdata
-            AdresseFra.Adresselinje = "testadresse 1 ";
-            AdresseTil.Adresselinje = "testadresse 2 ";
+            CurrentBooking.AdresseFra.Adresselinje = "testadresse 1 ";
+            CurrentBooking.AdresseTil.Adresselinje = "testadresse 2 ";
             //testdata
+            GemBookingKnap = new RelayCommand(GemBookingTilDiskAsync);
         }
+        public Booking CurrentBooking { get; set; }
+        public RelayCommand GemBookingKnap { get; set; }
 
-        public Adresse AdresseFra { get; set; }
-        public Adresse AdresseTil { get; set; }
+        private async void GemBookingTilDiskAsync()
+        {
+            
+            try
+            {
+                await PersistencyService.Gembooking("tempbooking",CurrentBooking);
+            }
+            catch (Exception)
+            {
+                PersistencyService.Makefile("tempbooking.json");
+                await PersistencyService.Gembooking("tempbooking", CurrentBooking);
+            }
+
+        }
 
     }
 }

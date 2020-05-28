@@ -26,5 +26,7 @@
         <CheckBox IsChecked="{x:Bind ViewModelBooking.CurrentBooking.Nedpakning, Mode=TwoWay}" Content="Nedpakning" Margin="642,354,0,0" VerticalAlignment="Top"/>
         <CheckBox IsChecked="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.Udpakning}" Content="Udpakning" Margin="640,431,0,0" VerticalAlignment="Top"/>
         <ToggleSwitch IsOn="{x:Bind ViewModelBooking.CurrentBooking.Privatflytning,Mode=TwoWay}" OffContent="Privatflytning" OnContent="Erhvervsflytning" Header="Type af flytning" Margin="891,265,0,0" VerticalAlignment="Top"/>
+        <HyperlinkButton Content="Click to go to AdressePage"
+            Click="HyperlinkButton_ClickAdresse" Margin="1095,23,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

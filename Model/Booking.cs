@@ -57,33 +57,33 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public override string ToString()
         {
-            string returnString = $"Booking nr {BookingId} Bruger detaljer: {BookingBruger}" +
-                $" Skal flytte fra adressen:  til adressen :  " +
+            string returnString = $"Booking nr {BookingId}. Bruger detaljer: {BookingBruger}" +
+                $" Skal flytte fra adressen:{AdresseFra.Adresselinje} til adressen: {AdresseTil.Adresselinje}. " +
                 $"på datoen: {FlytteDato} ";
             if (Nedpakning && Udpakning)
             {
-                returnString += " Kunde vil gerne have både nedpakning og udpakning ";
+                returnString += "Kunde vil gerne have både nedpakning og udpakning. ";
             }
             else if (Nedpakning)
             {
-                returnString += "Kunde ønsker kun nedpakning ";
+                returnString += "Kunde ønsker kun nedpakning. ";
             }
             else if (Udpakning)
             {
-                returnString += "Kunde ønsker kun udpakning ";
+                returnString += "Kunde ønsker kun udpakning. ";
             }
             else
             {
-                returnString += "Kunde har ikke specificeret pakning ";
+                returnString += "Kunde har ikke specificeret pakning. ";
             }
 
             if (Privatflytning)
             {
-                returnString += " Kunde har specificeret dette er en erhvervsflytning ";
+                returnString += "Kunde har specificeret dette er en erhvervsflytning. ";
             }
             else
             {
-                returnString += " Kunde har specificeret dette er en privatflytning ";
+                returnString += "Kunde har specificeret dette er en privatflytning. ";
             }
             return returnString;
         }

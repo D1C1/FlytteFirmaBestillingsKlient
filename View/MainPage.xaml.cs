@@ -38,5 +38,9 @@ namespace FlytteFirmaBestillingsKlient
         {
             this.Frame.Navigate(typeof(AdminPage));
         }
+        private void HyperlinkButton_ClickAdresse(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AdresseView));
+        }
     }
 }

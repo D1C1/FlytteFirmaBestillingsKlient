@@ -35,15 +35,20 @@ namespace FlytteFirmaBestillingsKlient
         //Properties slut
 
         /// <summary>
-        /// Sætter informationen som bliver indtastet i vores view til den gemte booking objekt
+        /// Sætter informationen som bliver indtastet i vores view til den gemte booking objekt, samt henter adresser fra midlertidig booking som bliver lavet i adresseview
         /// </summary>
-        private void SetInformation()
+        private async void SetInformation()
         {
+
+            Booking tempbooking = await PersistencyService.HentBooking("tempbooking");
+            CurrentBooking.AdresseFra = tempbooking.AdresseFra;
+            CurrentBooking.AdresseTil = tempbooking.AdresseTil;
             CurrentBooking.BookingBruger.ForNavn = NavnView;
             CurrentBooking.BookingBruger.Email = EmailView;
             CurrentBooking.BookingBruger.TlfNr = TlfnrView;
             CurrentBooking.FlytteDato = MovingDateView.Date;
         }
+        
         /// <summary>
         /// Gemmer vores booking objekt til en liste på vores disk, hvis listen ikke findes laver den først listen og prøver igen
         /// </summary>
