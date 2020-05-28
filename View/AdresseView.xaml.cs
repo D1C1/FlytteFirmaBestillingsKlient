@@ -22,8 +22,10 @@ namespace FlytteFirmaBestillingsKlient
     /// </summary>
     public sealed partial class AdresseView : Page
     {
+        public AdresseViewModel AdresseVM { get; set; }
         public AdresseView()
         {
+            AdresseVM = new AdresseViewModel();
             this.InitializeComponent();
         }
     }

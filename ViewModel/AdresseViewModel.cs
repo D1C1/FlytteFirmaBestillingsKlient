@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlytteFirmaBestillingsKlient
 {
-    class AdresseViewModel
+    public class AdresseViewModel
     {
     }
 }
