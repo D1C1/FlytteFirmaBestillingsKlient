@@ -8,7 +8,8 @@ namespace FlytteFirmaBestillingsKlient
 {
     public class Bruger
     {
-        private string _navn;
+        private string _forNavn;
+        private string _efterNavn;
         private string _Email;
         private int _tlfNr;
         private int _brugerId;
@@ -19,10 +20,17 @@ namespace FlytteFirmaBestillingsKlient
 
         }
 
-        public string Navn
+
+
+        public string ForNavn
         {
-            get { return _navn; }
-            set { _navn = value; }
+            get { return _forNavn; }
+            set { _forNavn = value; }
+        }
+        public string Efternavn
+        {
+            get { return _efterNavn; }
+            set { _efterNavn = value; }
         }
         public int TlfNr
         {
@@ -47,7 +55,7 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Navn {Navn}";
+            return $"Fornavn: {ForNavn} Efternavn: {Efternavn} ";
         }
     }
 }

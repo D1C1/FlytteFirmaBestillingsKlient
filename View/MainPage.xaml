@@ -12,18 +12,19 @@
     <Grid>
         <Button Command="{x:Bind ViewModelBooking.GemDataButton, Mode=OneWay}" Content="Gem Booking" Height="50" Width="105" HorizontalAlignment="Center" Margin="0,860,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="328,276,0,0" Text="{x:Bind ViewModelBooking.NavnView, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
-        <TextBox HorizontalAlignment="Left" Margin="328,354,0,0" Text="Efternavn" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
+        <TextBox HorizontalAlignment="Left" Margin="328,354,0,0" Text="{x:Bind ViewModelBooking.CurrentBooking.BookingBruger.Efternavn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
         <TextBox HorizontalAlignment="Left" Margin="328,431,0,0" Text="{x:Bind ViewModelBooking.EmailView, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
         <TextBox HorizontalAlignment="Left" Margin="328,515,0,0" Text="{x:Bind ViewModelBooking.TlfnrView, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
         <TextBlock HorizontalAlignment="Left" Margin="328,252,0,0" Text="Fornavn" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="328,330,0,0" Text="Efternavn(ikke brugt endnu)" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="328,330,0,0" Text="Efternavn" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="328,407,0,0" Text="E-mail" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="328,500,0,0" Text="Telefon Nr." TextWrapping="Wrap" VerticalAlignment="Top"/>
         <HyperlinkButton Content="Click to go to Adminpage"
                  Click="HyperlinkButton_Click" Margin="1306,28,0,0" VerticalAlignment="Top"/>
-        <CalendarDatePicker Date="{x:Bind ViewModelBooking.MovingDateView, Mode=TwoWay}" x:Name="MovingDatePicker" Margin="640,276,0,0" VerticalAlignment="Top"/>
+        <CalendarDatePicker Date="{x:Bind ViewModelBooking.MovingDateView, Mode=TwoWay}" DateFormat="{}{day.integer}/{month.integer}/{year.full}" x:Name="MovingDatePicker" Margin="640,276,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="640,252,0,0" Text="Vælg dato" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <CheckBox IsChecked="{x:Bind ViewModelBooking.CurrentBooking.Nedpakning, Mode=TwoWay}" Content="Nedpakning" Margin="642,354,0,0" VerticalAlignment="Top"/>
         <CheckBox IsChecked="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.Udpakning}" Content="Udpakning" Margin="640,431,0,0" VerticalAlignment="Top"/>
+        <ToggleSwitch IsOn="{x:Bind ViewModelBooking.CurrentBooking.Privatflytning,Mode=TwoWay}" OffContent="Privatflytning" OnContent="Erhvervsflytning" Header="Type af flytning" Margin="891,265,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
