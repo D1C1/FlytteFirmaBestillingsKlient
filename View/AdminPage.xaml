@@ -31,5 +31,8 @@
         <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="420" Margin="1070,165,0,0" Height="145">
             <TextBox IsReadOnly="True" PlaceholderText="Detalje Text, klik på booking for at vise detaljer" Text="{Binding Detaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
         </StackPanel>
+        <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="420" Margin="1070,710,0,0" Height="145">
+            <TextBox IsReadOnly="True" PlaceholderText="Adresse detaljer" Text="{Binding AdresseDetaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
+        </StackPanel>
     </Grid>
 </Page>

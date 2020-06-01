@@ -45,6 +45,11 @@ namespace FlytteFirmaBestillingsKlient
             get { return ToString(); }
             //set { _detaljer = value; }
         }
+        public string AdresseDetaljer
+        {
+            get { return $" Skal flytte fra adressen:{AdresseFra}\r\ntil adressen: {AdresseTil}. "; }
+            //set { _detaljer = value; }
+        }
 
         // indsæt tilvalg og materialer
         public bool Nedpakning { get; set; }
@@ -58,7 +63,6 @@ namespace FlytteFirmaBestillingsKlient
         public override string ToString()
         {
             string returnString = $"Booking nr {BookingId}. Bruger detaljer: {BookingBruger}" +
-                $" Skal flytte fra adressen:{AdresseFra} til adressen: {AdresseTil}. " +
                 $"på datoen: {FlytteDato} ";
             if (Nedpakning && Udpakning)
             {
