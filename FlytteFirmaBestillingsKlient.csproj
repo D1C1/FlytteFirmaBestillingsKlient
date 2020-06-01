@@ -116,6 +116,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Forside.xaml.cs">
+      <DependentUpon>Forside.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\AdresseViewModel.cs" />
     <Compile Include="View\AdresseView.xaml.cs">
       <DependentUpon>AdresseView.xaml</DependentUpon>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Forside.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AdresseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
