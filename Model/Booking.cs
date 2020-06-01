@@ -40,6 +40,11 @@ namespace FlytteFirmaBestillingsKlient
         public Adresse AdresseFra { get => _adresseFra; set => _adresseFra = value; }
         public Adresse AdresseTil { get => _adresseTil; set => _adresseTil = value; }
         public Bruger BookingBruger { get => _bookingBruger; set => _bookingBruger = value; }
+        public string FlyttedatoDetalje
+        {
+            get { return $"{FlytteDato.ToString("dd MMMM yyyy")}"; }
+        }
+
         public string Detaljer
         {
             get { return ToString(); }
