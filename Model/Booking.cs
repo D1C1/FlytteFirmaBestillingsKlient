@@ -62,32 +62,32 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public override string ToString()
         {
-            string returnString = $"Booking nr {BookingId}. Bruger detaljer: {BookingBruger}" +
-                $"på datoen: {FlytteDato} ";
+            string returnString = $"Booking nr {BookingId}.\r\nBruger detaljer:\r\n{BookingBruger}\r\n" +
+                $"Ønsket flyttedato: {FlytteDato.Day.ToString()}/{FlytteDato.Month.ToString()}-{FlytteDato.Year.ToString()}\r\n";
             if (Nedpakning && Udpakning)
             {
-                returnString += "Kunde vil gerne have både nedpakning og udpakning. ";
+                returnString += "Kunde vil gerne have både nedpakning og udpakning.\r\n";
             }
             else if (Nedpakning)
             {
-                returnString += "Kunde ønsker kun nedpakning. ";
+                returnString += "Kunde ønsker kun nedpakning.\r\n";
             }
             else if (Udpakning)
             {
-                returnString += "Kunde ønsker kun udpakning. ";
+                returnString += "Kunde ønsker kun udpakning.\r\n";
             }
             else
             {
-                returnString += "Kunde har ikke specificeret pakning. ";
+                returnString += "Kunde har ikke specificeret pakning.\r\n";
             }
 
             if (Privatflytning)
             {
-                returnString += "Kunde har specificeret dette er en erhvervsflytning. ";
+                returnString += "Kunde har specificeret dette er en erhvervsflytning.\r\n";
             }
             else
             {
-                returnString += "Kunde har specificeret dette er en privatflytning. ";
+                returnString += "Kunde har specificeret dette er en privatflytning.\r\n";
             }
             return returnString;
         }

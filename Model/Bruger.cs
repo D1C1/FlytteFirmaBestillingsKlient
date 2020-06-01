@@ -55,7 +55,7 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Fornavn: {ForNavn} Efternavn: {Efternavn} ";
+            return $"Fornavn: {ForNavn}\r\nEfternavn: {Efternavn}\r\nEmail: {Email}\r\ntelefon nummer: {TlfNr}  ";
         }
     }
 }
