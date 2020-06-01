@@ -46,6 +46,6 @@
             <TextBlock HorizontalAlignment="Left" Margin="95,406,0,0" Text="ParkeringsAfstandmeter" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
             <TextBlock HorizontalAlignment="Left" Margin="95,481,0,0" Text="Er der elevator" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
         </Grid>
-
+        <Image Source="/Assets/blaatlogoMindre.png" HorizontalAlignment="Left" Height="90" Margin="10,0,0,0" VerticalAlignment="Top" Width="146"/>
     </Grid>
 </Page>

@@ -34,5 +34,6 @@
         <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="420" Margin="1070,710,0,0" Height="145">
             <TextBox IsReadOnly="True" PlaceholderText="Adresse detaljer" Text="{Binding AdresseDetaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
         </StackPanel>
+        <Image Source="/Assets/blaatlogoMindre.png" HorizontalAlignment="Left" Height="90" Margin="10,0,0,0" VerticalAlignment="Top" Width="146"/>
     </Grid>
 </Page>
