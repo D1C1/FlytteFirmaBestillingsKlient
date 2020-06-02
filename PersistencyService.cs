@@ -102,8 +102,8 @@ namespace FlytteFirmaBestillingsKlient
         /// <summary>
         /// Gemmer et enkelt booking objekt, i stedet for liste
         /// </summary>
-        /// <param name="filNavn"></param>
-        /// <param name="booking"></param>
+        /// <param name="filNavn">Filens navn som skal gemmes på disken</param>
+        /// <param name="booking">objektet som bliver gemt på disken</param>
         /// <returns></returns>
         public static async Task Gembooking(string filNavn, Booking booking)
         {
@@ -116,7 +116,7 @@ namespace FlytteFirmaBestillingsKlient
         /// <summary>
         /// henter et enkelt booking, i stedet for liste
         /// </summary>
-        /// <param name="filNavn"></param>
+        /// <param name="filNavn">Filens navn som skal gemmes på disken</param>
         /// <returns></returns>
         public static async Task<Booking> HentBooking(string filNavn)
         {
