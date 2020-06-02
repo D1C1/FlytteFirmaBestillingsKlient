@@ -56,10 +56,10 @@ namespace FlytteFirmaBestillingsKlient
             //set { _detaljer = value; }
         }
 
-        // indsæt tilvalg og materialer
+        // tilvalg og materialer
         public string KommentarTilFlytning { get; set; }
-        public bool OpbevarinfAfFlytning { get; set; } // ikke implementeret
-        public bool EgenHjaelpMedFlytning { get; set; } // ikke implementeret
+        public bool OpbevarinfAfFlytning { get; set; }
+        public bool EgenHjaelpMedFlytning { get; set; }
         public bool Nedpakning { get; set; }
         public bool Udpakning { get; set; }
         public bool Privatflytning { get => _privatflytning; set => _privatflytning = value; }

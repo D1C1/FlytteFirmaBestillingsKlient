@@ -19,7 +19,9 @@ namespace FlytteFirmaBestillingsKlient
         }
         public Booking CurrentBooking { get; set; }
         public RelayCommand GemBookingKnap { get; set; }
-
+        /// <summary>
+        /// Gemmer et enkelt booking objekt til disk, bliver her brugt til at opbevare angivet adresse
+        /// </summary>
         private async void GemBookingTilDiskAsync()
         {
             

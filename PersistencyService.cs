@@ -67,7 +67,7 @@ namespace FlytteFirmaBestillingsKlient
         }
 
         /// <summary>
-        /// Denne metode er lavet til at deserialisere et Json objekt
+        /// Denne metode er lavet til at deserialisere et Json objekt og give en liste af booking objekter tilbage
         /// </summary>
         /// <param name="jsonText"></param>
         /// <returns></returns>

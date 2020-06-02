@@ -28,9 +28,6 @@ namespace FlytteFirmaBestillingsKlient
         public string EmailView { get; set; }
         public int TlfnrView { get; set; }
         //Brugerdetaljer slut
-        //Adressedetaljer
-
-        //Adressedetaljer slut
         public DateTimeOffset MovingDateView { get; set; }// Flyttedato sat af calender date picker
         //Properties slut
 

@@ -40,10 +40,16 @@ namespace FlytteFirmaBestillingsKlient
                 OC_Bookings.Add(booking);
             }
         }
+        /// <summary>
+        /// fjerner valgte bookning fra listen
+        /// </summary>
         private void RemoveBooking()
         {
             OC_Bookings.Remove(SelectedBooking);
         }
+        /// <summary>
+        /// Gemmer liste efter man er færdig med at redigere den
+        /// </summary>
         private async void GemListeTilDiskAsync()
         {
             await PersistencyService.GemListe("Booking1.json",OC_Bookings);
