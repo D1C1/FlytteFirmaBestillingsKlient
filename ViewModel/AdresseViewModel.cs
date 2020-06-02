@@ -25,12 +25,12 @@ namespace FlytteFirmaBestillingsKlient
             
             try
             {
-                await PersistencyService.Gembooking("tempbooking",CurrentBooking);
+                await PersistencyService.Gembooking("tempbooking.json", CurrentBooking);
             }
             catch (Exception)
             {
                 PersistencyService.Makefile("tempbooking.json");
-                await PersistencyService.Gembooking("tempbooking", CurrentBooking);
+                await PersistencyService.Gembooking("tempbooking.json", CurrentBooking);
             }
 
         }
