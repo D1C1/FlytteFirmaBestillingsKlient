@@ -57,6 +57,9 @@ namespace FlytteFirmaBestillingsKlient
         }
 
         // indsæt tilvalg og materialer
+        public string KommentarTilFlytning { get; set; }
+        public bool OpbevarinfAfFlytning { get; set; } // ikke implementeret
+        public bool EgenHjaelpMedFlytning { get; set; } // ikke implementeret
         public bool Nedpakning { get; set; }
         public bool Udpakning { get; set; }
         public bool Privatflytning { get => _privatflytning; set => _privatflytning = value; }
@@ -85,15 +88,9 @@ namespace FlytteFirmaBestillingsKlient
             {
                 returnString += "Kunde har ikke specificeret pakning.\r\n";
             }
-
-            if (Privatflytning)
-            {
-                returnString += "Kunde har specificeret dette er en erhvervsflytning.\r\n";
-            }
-            else
-            {
-                returnString += "Kunde har specificeret dette er en privatflytning.\r\n";
-            }
+            returnString += Privatflytning? "Kunde har specificeret dette er en erhvervsflytning.\r\n" : "Kunde har specificeret dette er en privatflytning.\r\n";
+            returnString += OpbevarinfAfFlytning ? "Kunde ønsker opbevaring.\r\n" : "Kunde ønsker ikke opbevaring.\r\n";
+            returnString += EgenHjaelpMedFlytning ? "Kunde vil gerne hjælpe med flytning.\r\n" : "Kunde ønsker ikke at hjælpe med flytning.\r\n";
             return returnString;
         }
     }
