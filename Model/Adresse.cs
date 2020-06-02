@@ -35,14 +35,14 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public override string ToString()
         {
-            string returnstring = $"{Adresselinje} {Postnummer} {By}, antal værelser {AntalVaerelser}, parkerings afstand {ParkeringsAfstandmeter}, bolig areal {Boligarealm2}m2 ";
+            string returnstring = $"{Adresselinje}\r\nPostnummer: {Postnummer} {By}\r\nAntal værelser {AntalVaerelser}\r\nParkerings afstand {ParkeringsAfstandmeter} meter\r\nBolig areal {Boligarealm2}m2\r\n ";
             if (IsElevator)
             {
-                returnstring += "der er elevator i bygningen ";
+                returnstring += "der er elevator i bygningen\r\n ";
             }
             else
             {
-                returnstring += "ingen elevator i bygningen";
+                returnstring += "ingen elevator i bygningen\r\n ";
             }
             return returnstring;
         }
