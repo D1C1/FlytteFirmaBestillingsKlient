@@ -10,7 +10,7 @@
     RequestedTheme="light">
 
     <Grid>
-        <Grid Margin="0,115,925,0" >
+        <Grid Margin="10,115,915,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
             <TextBox HorizontalAlignment="Left" Margin="95,80,0,0" Text="{x:Bind AdresseVM.CurrentBooking.AdresseFra.Adresselinje , Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Margin="95,150,0,0" Text="{x:Bind AdresseVM.CurrentBooking.AdresseFra.Postnummer , Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Margin="95,220,0,0" Text="{x:Bind AdresseVM.CurrentBooking.AdresseFra.By , Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -24,13 +24,13 @@
             <TextBlock HorizontalAlignment="Left" Margin="95,196,0,0" Text="By" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
             <TextBlock HorizontalAlignment="Left" Margin="95,266,0,0" Text="Bolig areal i m2" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
             <TextBlock HorizontalAlignment="Left" Margin="95,336,0,0" Text="Antal værelser" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
-            <TextBlock HorizontalAlignment="Left" Margin="95,406,0,0" Text="ParkeringsAfstandmeter" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
+            <TextBlock HorizontalAlignment="Left" Margin="95,406,0,0" Text="Parkerings Afstand i meter" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
             <TextBlock HorizontalAlignment="Left" Margin="95,481,0,0" Text="Er der elevator" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
         </Grid>
-        <Button Command="{x:Bind AdresseVM.GemBookingKnap,Mode=TwoWay}" Content="Gem Adresser" Height="65" Width="135" HorizontalAlignment="Center"/>
+        <Button Command="{x:Bind AdresseVM.GemBookingKnap,Mode=TwoWay}" Content="Gem Adresser" Height="65" Width="135" HorizontalAlignment="Center" Margin="0,461,0,0" VerticalAlignment="Top"/>
         <HyperlinkButton Content="Click to go to MainPage"
-                 Click="HyperlinkButton_Click" Margin="1342,10,0,0" VerticalAlignment="Top"/>
-        <Grid Margin="925,115,0,0" >
+                 Click="HyperlinkButton_Click" Margin="1342,24,0,0" VerticalAlignment="Top"/>
+        <Grid Margin="925,115,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" >
             <TextBox HorizontalAlignment="Left" Margin="95,80,0,0" Text="{x:Bind AdresseVM.CurrentBooking.AdresseTil.Adresselinje , Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Margin="95,150,0,0" Text="{x:Bind AdresseVM.CurrentBooking.AdresseTil.Postnummer , Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Margin="95,220,0,0" Text="{x:Bind AdresseVM.CurrentBooking.AdresseTil.By , Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -44,7 +44,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="95,196,0,0" Text="By" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
             <TextBlock HorizontalAlignment="Left" Margin="95,266,0,0" Text="Bolig areal i m2" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
             <TextBlock HorizontalAlignment="Left" Margin="95,336,0,0" Text="Antal værelser" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
-            <TextBlock HorizontalAlignment="Left" Margin="95,406,0,0" Text="ParkeringsAfstandmeter" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
+            <TextBlock HorizontalAlignment="Left" Margin="95,406,0,0" Text="Parkerings Afstand i meter" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
             <TextBlock HorizontalAlignment="Left" Margin="95,481,0,0" Text="Er der elevator" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
         </Grid>
         <Image Source="/Assets/blaatlogoMindre.png" HorizontalAlignment="Left" Height="90" Margin="10,0,0,0" VerticalAlignment="Top" Width="146"/>

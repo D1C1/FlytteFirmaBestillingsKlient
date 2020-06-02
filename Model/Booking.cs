@@ -52,7 +52,7 @@ namespace FlytteFirmaBestillingsKlient
         }
         public string AdresseDetaljer
         {
-            get { return $"Skal flytte fra adressen:{AdresseFra}\r\ntil adressen: {AdresseTil}. "; }
+            get { return $"Skal flytte fra adressen:{AdresseFra}\r\nSkal flytte til adressen: {AdresseTil}"; }
             //set { _detaljer = value; }
         }
 

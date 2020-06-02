@@ -35,7 +35,7 @@ namespace FlytteFirmaBestillingsKlient
         /// <returns></returns>
         public override string ToString()
         {
-            string returnstring = $"{Adresselinje}\r\nPostnummer: {Postnummer} {By}\r\nAntal værelser {AntalVaerelser}\r\nParkerings afstand {ParkeringsAfstandmeter} meter\r\nBolig areal {Boligarealm2}m2\r\n ";
+            string returnstring = $"{Adresselinje}\r\nPostnummer: {Postnummer} {By}\r\nAntal værelser {AntalVaerelser}\r\nParkerings afstand {ParkeringsAfstandmeter} meter\r\nBolig areal {Boligarealm2}m2\r\n";
             if (IsElevator)
             {
                 returnstring += "der er elevator i bygningen\r\n ";

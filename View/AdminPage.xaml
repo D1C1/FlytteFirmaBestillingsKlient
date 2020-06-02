@@ -23,19 +23,17 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
-        <Button Command="{x:Bind ViewModelAdmin.HentDataButton, Mode=OneWay}" Content="Hent Data" Margin="1263,330,0,0" Height="92" Width="237" VerticalAlignment="Top"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="1179,395,84,0" Height="266">
+            <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.HentDataButton}" Content="Hent Data" Height="92" Width="237"/>
+            <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.SletData}" Content="Slet Booking" Height="92" Width="237"/>
+            <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.GemData}" Content="Gem Liste" Height="92" Width="237"/>
+        </StackPanel>
         <HyperlinkButton Content="Click to go to MainPage"
-                 Click="HyperlinkButton_Click" Margin="1342,10,0,0" VerticalAlignment="Top"/>
-        <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.SletData}" Content="Slet Booking" Margin="1263,0,0,0" Height="92" Width="237"/>
-        <Button Command="{x:Bind Mode=OneWay, Path=ViewModelAdmin.GemData}" Content="Gem Liste" Margin="1263,593,0,0" VerticalAlignment="Top" Height="92" Width="237"/>
-        <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="420" Margin="838,190,0,0" Height="145">
-            <TextBox IsReadOnly="True" PlaceholderText="Detalje Text, klik på booking for at vise detaljer" Text="{Binding Detaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
-        </StackPanel>
-        <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Center" Width="420" Margin="838,0,0,0" Height="145">
-            <TextBox IsReadOnly="True" PlaceholderText="Adresse detaljer" Text="{Binding AdresseDetaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
-        </StackPanel>
-        <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="420" Margin="838,639,0,0" Height="145">
-            <TextBox IsReadOnly="True" PlaceholderText="Kommentar til flytningen fra kunden, hvis tom ingen kommentar" Text="{Binding KommentarTilFlytning}" TextWrapping="Wrap" Height="136" Width="402"/>
+                 Click="HyperlinkButton_Click" Margin="1342,24,0,0" VerticalAlignment="Top"/>
+        <StackPanel DataContext="{Binding SelectedItem, ElementName=Bookinglist}" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="420" Margin="750,327,0,0" Height="412">
+            <TextBox IsReadOnly="True" PlaceholderText="Bruger detaljer: klik på booking for at vise detaljer" Text="{Binding Detaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
+            <TextBox IsReadOnly="True" PlaceholderText="Adresse detaljer: klik på booking for at vise detaljer" Text="{Binding AdresseDetaljer}" TextWrapping="Wrap" Height="136" Width="402"/>
+            <TextBox IsReadOnly="True" PlaceholderText="Kommentar til flytningen fra kunden, hvis tom ingen kommentar: klik på booking for at vise detaljer" Text="{Binding KommentarTilFlytning}" TextWrapping="Wrap" Height="136" Width="402"/>
         </StackPanel>
         <Image Source="/Assets/blaatlogoMindre.png" HorizontalAlignment="Left" Height="90" Margin="10,0,0,0" VerticalAlignment="Top" Width="146"/>
     </Grid>

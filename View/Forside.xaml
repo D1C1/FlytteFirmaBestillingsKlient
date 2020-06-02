@@ -11,7 +11,8 @@
 
     <Grid>
         <HyperlinkButton Content="Bestilling"
-                 Click="HyperlinkButton_Click" Margin="1352,10,0,0" VerticalAlignment="Top" Height="50" Width="138"/>
+                 Click="HyperlinkButton_Click" Margin="1335,20,0,0" VerticalAlignment="Top" Height="50" Width="138"/>
         <Image Source="/Assets/blaatlogoMindre.png" HorizontalAlignment="Left" Height="90" Margin="10,0,0,0" VerticalAlignment="Top" Width="146"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,255,0,0" Text="Dette er fosiden til vores projekt, brug knapperne øverst på siden til at navigere programmet" TextWrapping="Wrap" VerticalAlignment="Top" Height="85" Width="251"/>
     </Grid>
 </Page>
