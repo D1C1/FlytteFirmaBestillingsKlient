@@ -24,6 +24,7 @@ namespace FlytteFirmaBestillingsKlient
     {
         public Forside()
         {
+            PersistencyService.Makefile("tempbooking.json");
             this.InitializeComponent();
         }
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
