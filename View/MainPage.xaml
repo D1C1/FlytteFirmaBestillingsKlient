@@ -17,10 +17,10 @@
             Click="HyperlinkButton_ClickAdresse" Margin="1099,29,0,0" VerticalAlignment="Top"/>
         <Image Source="/Assets/blaatlogoMindre.png" HorizontalAlignment="Left" Height="90" Margin="10,0,0,0" VerticalAlignment="Top" Width="146"/>
         <Grid HorizontalAlignment="Center" Height="363" VerticalAlignment="Center" Width="850">
-            <TextBox HorizontalAlignment="Left" Margin="0,24,0,0" Text="{x:Bind Mode=TwoWay, Path=ViewModelBooking.NavnView}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
+            <TextBox HorizontalAlignment="Left" Margin="0,24,0,0" Text="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.BookingBruger.ForNavn}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
             <TextBox HorizontalAlignment="Left" Margin="0,102,0,0" Text="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.BookingBruger.Efternavn}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
-            <TextBox HorizontalAlignment="Left" Margin="0,179,0,0" Text="{x:Bind Mode=TwoWay, Path=ViewModelBooking.EmailView}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
-            <TextBox HorizontalAlignment="Left" Margin="0,263,0,0" Text="{x:Bind Mode=TwoWay, Path=ViewModelBooking.TlfnrView}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
+            <TextBox HorizontalAlignment="Left" Margin="0,179,0,0" Text="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.BookingBruger.Email}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
+            <TextBox HorizontalAlignment="Left" Margin="0,263,0,0" Text="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.BookingBruger.TlfNr}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123"/>
             <TextBlock HorizontalAlignment="Left" Text="Fornavn" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="0,78,0,0" Text="Efternavn" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="0,155,0,0" Text="E-mail" TextWrapping="Wrap" VerticalAlignment="Top"/>
