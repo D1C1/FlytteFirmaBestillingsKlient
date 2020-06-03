@@ -22,17 +22,21 @@ namespace FlytteFirmaBestillingsKlient
         public static async Task GemDataTilDiskAsyncPS(Booking booking)
         {
             ObservableCollection<Booking> bookings = await HentDataFraDiskAsyncPS("Booking1.json"); // henter den nuværende liste fra disken
-            try
-            {
+           // try
+            //{
+                if (bookings==null)
+                {
+                    bookings = new ObservableCollection<Booking>();
+                }
                 booking.BookingId = bookings.Count + 1;
                 bookings.Add(booking);// indsætter den nye booking i listen
-            }
-            catch (Exception)
-            {
+           // }
+           // catch (Exception)
+            //{
 
-                bookings = new ObservableCollection<Booking>();
-                bookings.Add(booking);// indsætter den nye booking i listen
-            }
+              //  bookings = new ObservableCollection<Booking>();
+               // bookings.Add(booking);// indsætter den nye booking i listen
+            //}
 
             await GemListe("Booking1.json",bookings);
         }
