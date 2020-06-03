@@ -34,5 +34,6 @@
             <CheckBox IsChecked="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.OpbevarinfAfFlytning}" Content="Opbevaring af flytning" Margin="314,263,0,0" VerticalAlignment="Top"/>
             <CheckBox IsChecked="{x:Bind Mode=TwoWay, Path=ViewModelBooking.CurrentBooking.EgenHjaelpMedFlytning}" Content="Vil du gerne hjælpe med flytningen" Margin="314,331,0,0" VerticalAlignment="Top"/>
         </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="803,170,0,0" Text="{x:Bind ViewModelBooking.Advarsler,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Height="100" Width="299"/>
     </Grid>
 </Page>
