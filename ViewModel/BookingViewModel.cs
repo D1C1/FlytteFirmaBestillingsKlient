@@ -43,13 +43,16 @@ namespace FlytteFirmaBestillingsKlient
         //Properties slut
         
         public event PropertyChangedEventHandler PropertyChanged;
-
+        /// <summary>
+        /// Vi bruger notifyproperty changed til at fortælle vores view når en property har ændret værdi
+        /// </summary>
+        /// <param name="propertyName"></param>
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         /// <summary>
-        /// Sætter informationen som bliver indtastet i vores view til den gemte booking objekt, samt henter adresser fra midlertidig booking som bliver lavet i adresseview
+        /// Tjekker om adressen er tastet ind, hvis nej skriv advarsel til kunden.
         /// </summary>
         private async Task SetInformation()
         {
