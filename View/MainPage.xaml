@@ -11,9 +11,9 @@
 
     <Grid>
         <Button Command="{x:Bind ViewModelBooking.GemDataButton, Mode=OneWay}" Content="Gem Booking" Height="50" Width="105" HorizontalAlignment="Center" Margin="0,860,0,0" VerticalAlignment="Top"/>
-        <HyperlinkButton Content="Click to go to Adminpage"
+        <HyperlinkButton Content="Klik for at gå til Administrator side"
                  Click="HyperlinkButton_Click" Margin="1331,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.531"/>
-        <HyperlinkButton Content="Click to go to AdressePage"
+        <HyperlinkButton Content="Klik for at gå til Adresse side"
             Click="HyperlinkButton_ClickAdresse" Margin="1099,29,0,0" VerticalAlignment="Top"/>
         <Image Source="/Assets/blaatlogoMindre.png" HorizontalAlignment="Left" Height="90" Margin="10,0,0,0" VerticalAlignment="Top" Width="146"/>
         <Grid HorizontalAlignment="Center" Height="363" VerticalAlignment="Center" Width="850">

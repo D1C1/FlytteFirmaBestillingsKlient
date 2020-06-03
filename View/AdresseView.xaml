@@ -28,7 +28,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="95,481,0,0" Text="Er der elevator" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.977,-0.324"/>
         </Grid>
         <Button Command="{x:Bind AdresseVM.GemBookingKnap,Mode=TwoWay}" Content="Gem Adresser" Height="65" Width="135" HorizontalAlignment="Center" Margin="0,461,0,0" VerticalAlignment="Top"/>
-        <HyperlinkButton Content="Click to go to MainPage"
+        <HyperlinkButton Content="Klik for at gå til Bestilling"
                  Click="HyperlinkButton_Click" Margin="1342,24,0,0" VerticalAlignment="Top"/>
         <Grid Margin="925,115,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" >
             <TextBox HorizontalAlignment="Left" Margin="95,80,0,0" Text="{x:Bind AdresseVM.CurrentBooking.AdresseTil.Adresselinje , Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
