@@ -56,8 +56,7 @@ namespace FlytteFirmaBestillingsKlient
         /// </summary>
         private async Task SetInformation()
         {
-            try
-            {
+
                 Booking tempbooking = await PersistencyService.HentBooking("tempbooking.json");
                 if (tempbooking==null)
                 {
@@ -71,12 +70,8 @@ namespace FlytteFirmaBestillingsKlient
                     CanSave = true;
                 } 
                 
-            }
-            catch (Exception)
-            {
-                Advarsler = "Adresse ikke sat, gå venligst til adresse side for at sætte adresse";
-                CanSave = false;
-            }
+            
+
 
             CurrentBooking.FlytteDato = MovingDateView.Date;
         }
