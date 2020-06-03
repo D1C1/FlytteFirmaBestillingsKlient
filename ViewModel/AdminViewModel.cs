@@ -34,11 +34,20 @@ namespace FlytteFirmaBestillingsKlient
         /// </summary>
         private async void HentDataFraDiskAsync()
         {
-            ObservableCollection<Booking> templist = await PersistencyService.HentDataFraDiskAsyncPS("Booking1.json");
-            foreach (var booking in templist)
+            try
             {
-                OC_Bookings.Add(booking);
+                ObservableCollection<Booking> templist = await PersistencyService.HentDataFraDiskAsyncPS("Booking1.json");
+                foreach (var booking in templist)
+                {
+                    OC_Bookings.Add(booking);
+                }
             }
+            catch (Exception)
+            {
+                
+            }
+            
+            
         }
         /// <summary>
         /// fjerner valgte bookning fra listen
