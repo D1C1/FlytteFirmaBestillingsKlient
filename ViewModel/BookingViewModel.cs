@@ -69,10 +69,6 @@ namespace FlytteFirmaBestillingsKlient
                     CurrentBooking.AdresseTil = tempbooking.AdresseTil;
                     CanSave = true;
                 } 
-                
-            
-
-
             CurrentBooking.FlytteDato = MovingDateView.Date;
         }
 
