@@ -24,17 +24,7 @@ namespace FlytteFirmaBestillingsKlient
         /// </summary>
         private async void GemBookingTilDiskAsync()
         {
-            
-            try
-            {
                 await PersistencyService.Gembooking("tempbooking.json", CurrentBooking);
-            }
-            catch (Exception)
-            {
-                PersistencyService.Makefile("tempbooking.json");
-                await PersistencyService.Gembooking("tempbooking.json", CurrentBooking);
-            }
-
         }
 
     }
