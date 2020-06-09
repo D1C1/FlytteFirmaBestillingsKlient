@@ -11,11 +11,11 @@ namespace FlytteFirmaBestillingsKlient
     /// </summary>
     public class Booking
     {
-        Adresse _adresseFra;
-        Adresse _adresseTil;
-        DateTime _flytteDato;
-        Bruger _bookingBruger = new Bruger();
-        bool _privatflytning = false;
+        private Adresse _adresseFra;
+        private Adresse _adresseTil;
+        private DateTime _flytteDato;
+        private Bruger _bookingBruger = new Bruger();
+        private bool _privatflytning = false;
         private int _bookingId;
 
 
